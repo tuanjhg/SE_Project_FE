@@ -1,10 +1,6 @@
 import {
-  BsDribbble,
-  BsFacebook,
   BsGithub,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
+
 } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
@@ -25,7 +21,7 @@ const Footer = () => {
               alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-headingColor">
-              Bentilzone
+              Restaurant
             </span>
           </Link>
         </motion.div>
@@ -37,62 +33,17 @@ const Footer = () => {
             {
               new Date().getFullYear()
             }    
-           {" "}Bentilzone™. All Rights Reserved.
+           {" "}Restaurant™. All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0 md:text-xl">
           <motion.a
             whileTap={{ scale: 1.1 }}
             target={"_blank"}
             rel="noreferrer"
-            href="https://qbentil.me"
-            className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
-          >
-            <BsDribbble />
-          </motion.a>
-          <motion.a
-            whileTap={{ scale: 1.1 }}
-            target={"_blank"}
-            rel="noreferrer"
-            href="https://github.com/qbentil"
+            href="https://github.com/"
             className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
           >
             <BsGithub />
-          </motion.a>
-          <motion.a
-            whileTap={{ scale: 1.1 }}
-            target={"_blank"}
-            rel="noreferrer"
-            href="https://linkedin.com/in/bentil"
-            className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
-          >
-            <BsLinkedin />
-          </motion.a>
-          <motion.a
-            whileTap={{ scale: 1.1 }}
-            target={"_blank"}
-            rel="noreferrer"
-            href="https://twitter.com/themanbentil"
-            className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
-          >
-            <BsTwitter />
-          </motion.a>
-          <motion.a
-            whileTap={{ scale: 1.1 }}
-            target={"_blank"}
-            rel="noreferrer"
-            href="https://instagram.com/qbentil"
-            className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
-          >
-            <BsInstagram />
-          </motion.a>
-          <motion.a
-            whileTap={{ scale: 1.1 }}
-            target={"_blank"}
-            rel="noreferrer"
-            href="https://facebook.com/qbentil"
-            className="text-textColor h-10 w-10 bg-primary rounded-full flex items-center justify-center"
-          >
-            <BsFacebook />
           </motion.a>
         </div>
       </div>

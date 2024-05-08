@@ -80,7 +80,6 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-
               <div className="flex justify-between items-center mb-6"></div>
 
               <p

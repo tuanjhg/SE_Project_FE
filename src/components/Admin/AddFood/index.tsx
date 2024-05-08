@@ -42,7 +42,7 @@ const AddFood = () => {
     setLoadermessage(`Saving Product ${title}.`);
     setLoading(true);
     try {
-      if (!title || !calories || !price || !image || !category) {
+      if (!title || !calories || !price  || !category) {
         toast.error("Please fill all fields before saving product 🤗");
         setLoading(false);
         return;

@@ -26,9 +26,9 @@ const MomoForm = () => {
         onChange={(e) => updateCheckoutData("provider", e.target.value)}
       >
         <option value="default" selected disabled>Select Provider</option>
-        <option value="MTN">MTN Mobile Money</option>
-        <option value="airtel">Airtel Tigo Money</option>
-        <option value="Vodafone">Vodafone Cash</option>
+        <option value="Momo"> Mobile Money</option>
+        <option value="Bidv">Bidv Banking</option>
+        <option value="Viettel">Viettel Money</option>
 
       </select>
     </div>
@@ -52,7 +52,7 @@ const MomoForm = () => {
         htmlFor="number"
         className="font-bold text-sm mb-1 text-gray-100"
       >
-        MOMO Number
+        Account Number
       </label>
       <input
         type="text"

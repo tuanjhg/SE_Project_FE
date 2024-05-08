@@ -64,13 +64,13 @@ const Form = () => {
         </button>
       </form>
       <p className="mb-2 cursor-pointer text-sm text-gray-500 dark:text-gray-400">
-        <a href="mailto:bentilshadrack72@gmail.com" className="hover:underline">
-          bentilshadrack72@gmail.com
+        <a href="mailto:tuankhongjhg902@gmail.com" className="hover:underline">
+          tuankhongjhg902@gmail.com
         </a>
       </p>
       <p className="text-sm cursor-pointer text-gray-500 dark:text-gray-400">
-        <a href="tel:+233556844331" className="hover:underline">
-          +233 55 684 4331
+        <a href="tel:0339946255" className="hover:underline">
+          0339946255
         </a>
       </p>
     </div>

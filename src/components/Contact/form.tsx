@@ -10,7 +10,7 @@ const Form = () => {
 
     const submitForm = (e:any) => {
         e.preventDefault()
-        return toast.info(`${name} Form handling is not implemented yet`, {
+        return toast.info(`Send message successfull`, {
             position: 'top-left',
             autoClose: 3000,
             toastId: 'form'

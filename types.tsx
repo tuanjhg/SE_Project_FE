@@ -33,7 +33,7 @@ export type FoodCategory = {
 export type cartItem = {
   id: number;
   fid: number;
-  oid: string;
+  uid: string;
   qty: number;
 }
 

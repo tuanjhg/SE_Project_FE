@@ -14,12 +14,12 @@ const Header = ({ action }: { action: any }) => {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
       >
-        <p>Secured Payment</p>
+        <p>Info for ship</p>
       </motion.div>
       <motion.div
         whileTap={{scale:0.9}} 
         className="flex items-center justify-center gap-1"
-        title="Secured"
+        title="Secured by me"
       >
           <BsShieldLock className="text-xl cursor-pointer text-cartNumBg" />
           <RiSecurePaymentLine className="text-xl cursor-pointer text-cartNumBg" />

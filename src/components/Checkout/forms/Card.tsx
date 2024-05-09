@@ -8,7 +8,7 @@ const CardForm = () => {
         htmlFor="name"
         className="font-bold text-sm mb-1 text-gray-100"
       >
-        Name on Card
+        Name 
       </label>
       <input
         type="text"
@@ -23,7 +23,7 @@ const CardForm = () => {
         htmlFor="number"
         className="font-bold text-sm mb-1 text-gray-100"
       >
-        Card Number
+        Phone Number
       </label>
       <input
         type="text"
@@ -39,13 +39,12 @@ const CardForm = () => {
         htmlFor="number"
         className="font-bold text-sm mb-1 text-gray-100"
       >
-        Expiry Date
+        Position
       </label>
       <input
         type="text"
         id="text"
         className="w-full px-3 py-2 mb-1 border-2 text-white border-gray-500 rounded-md focus:outline-none focus:border-orange-500 focus:text-orange-500 bg-cartItem transition-colors"
-        placeholder="MM/YY"
         autoComplete="off"
       />
       </div>

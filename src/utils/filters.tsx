@@ -10,3 +10,7 @@ export const GetFoodById = (id: number) => {
     const [{foodItems}, dispatch] = useStateValue()
     return foodItems?.find((item:FoodItem) => item.id === id)
 }
+export const GetCartItemsByOid = (oid:number) => {
+    const [{cartItems}, dispatch] = useStateValue()
+    return cartItems?.filter((item:any) => item.oid === oid)
+}

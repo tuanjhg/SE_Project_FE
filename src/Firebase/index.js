@@ -222,3 +222,24 @@ export const firebaseGetAllUsers = async () => {
 export const firebaseDeleteFood = async (id) => {
   await deleteDoc(doc(firestore, "Food", `${id}`));
 }
+export const firebaseGetOrder = async () => {
+  const orders = await getDocs(
+    query(collection(firestore, "Orders"))
+  );
+  let ordersData = orders.docs.map((doc) => doc.data());
+  return ordersData
+}
+export const firebaseAddOrder = async (data) => {
+  const order = await firebaseGetOrder(data.id);
+  if (order.length === 0) {
+    await setDoc(doc(firestore, "Orders", `${data.id}`), data, {
+      merge: true,
+    });
+  }
+}
+export const firebaseGetcartItemsbyuid = async (uid) => {
+  const items = await getDocs(
+    query(collection(firestore, "CartItems"), orderBy("id"))
+  );
+  return shuffleItems(items.docs.map((doc) => doc.data())).filter((item) => item.uid === uid);
+}

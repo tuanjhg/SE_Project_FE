@@ -1,14 +1,13 @@
 import { BiLock } from "react-icons/bi";
 import CardForm from "./forms/Card";
 import CheckoutFooter from "./footer";
-import Selector from "./Selector";
 import { motion } from "framer-motion";
 import { useStateValue } from "../../context/StateProvider";
 import { emptyCart } from "../../utils/functions";
 import { useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { toast } from "react-toastify";
-
+import {firebaseAddOrder} from "../../Firebase/index.js";
 const Body = ({ action }: { action: any }) => {
   const [{ checkoutData, cartTotal, cartItems, foodItems }, dispatch] =
     useStateValue();
@@ -17,6 +16,12 @@ const Body = ({ action }: { action: any }) => {
   const confirmOrder = () => {
     if(!checkoutData) return toast.error("Complete order info")
     setLoading(true);
+    let data ={
+      cartItems,
+      Date: new Date().toLocaleString(),
+      Status:"waiting for shipping",
+    }
+    firebaseAddOrder(data)
     setTimeout(async () => {
       setLoading(false);
       await emptyCart(cartItems, foodItems, dispatch);
@@ -29,9 +34,6 @@ const Body = ({ action }: { action: any }) => {
   };
   return (
     <div className="w-full h-full rounded-t-[2rem]  bg-cartBg flex flex-col">
-      {/* Payment Selectors */}
-      <Selector />
-      {/* payment form  */}
       <div className="min-h-[50vh] mt-5">
         { <CardForm />}
         <div className="w-full flex items-center justify-center my-2">

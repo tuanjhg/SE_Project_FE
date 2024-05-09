@@ -33,7 +33,7 @@ const CardForm = () => {
         autoComplete="off"
       />
     </div>
-    <div className="w-full flex justify-between gap-1 mb-2">
+    <div className="w-full flex flex-col mb-2">
       <div className='flex flex-col '>
       <label
         htmlFor="number"
@@ -45,21 +45,6 @@ const CardForm = () => {
         type="text"
         id="text"
         className="w-full px-3 py-2 mb-1 border-2 text-white border-gray-500 rounded-md focus:outline-none focus:border-orange-500 focus:text-orange-500 bg-cartItem transition-colors"
-        autoComplete="off"
-      />
-      </div>
-      <div className='flex flex-col '>
-      <label
-        htmlFor="number"
-        className="font-bold text-sm mb-1 text-gray-100"
-      >
-        CVV
-      </label>
-      <input
-        type="text"
-        id="password"
-        className="w-full px-3 py-2 mb-1 border-2 text-white border-gray-500 rounded-md focus:outline-none focus:border-orange-500 focus:text-orange-500 bg-cartItem transition-colors"
-        placeholder="CVV"
         autoComplete="off"
       />
       </div>

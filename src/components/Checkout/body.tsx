@@ -17,9 +17,10 @@ const Body = ({ action }: { action: any }) => {
     if(!checkoutData) return toast.error("Complete order info")
     setLoading(true);
     let data ={
-      cartItems,
-      Date: new Date().toLocaleString(),
-      Status:"waiting for shipping",
+      id:cartItems[0].id,
+      order_date: new Date().toLocaleString(),
+      status:"waiting for shipping",
+      user_id:cartItems[0].uid,
     }
     firebaseAddOrder(data)
     setTimeout(async () => {

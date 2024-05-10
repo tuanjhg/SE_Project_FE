@@ -47,7 +47,7 @@ function App() {
       <div className="w-screen h-auto min-h-[100vh] flex flex-col bg-primary">
         {showCart && <Cart />}
         {showContactForm && <Contact />}
-        { <Header />}
+        {!(adminMode && isAdmin(user)) &&  <Header />}
         <main
           className={`${
             !(adminMode && isAdmin(user)) &&

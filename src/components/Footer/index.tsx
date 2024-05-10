@@ -21,7 +21,7 @@ const Footer = () => {
               alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-headingColor">
-              Restaurant
+              13 Restaurant
             </span>
           </Link>
         </motion.div>

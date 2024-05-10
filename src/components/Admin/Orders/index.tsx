@@ -41,8 +41,8 @@ const Orders = () => {
       {/* dasboard statistics and counts */}
       <div className="w-full grid grid-cols-3 gap-1">
         {
-          filteredOrders.map((orders:any) => (
-            <Order key={orders.id} item={orders}/>
+          filteredOrders.map((order:any) => (
+            <Order key={order.id} item={order}/>
           ))
         }
       </div>

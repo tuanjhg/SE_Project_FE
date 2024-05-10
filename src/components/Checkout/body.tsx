@@ -16,7 +16,7 @@ const Body = ({ action }: { action: any }) => {
   const confirmOrder = () => {
     if(!checkoutData) return toast.error("Complete order info")
     setLoading(true);
-    let data ={
+    const data ={
       id:cartItems[0].id,
       order_date: new Date().toLocaleString(),
       status:"waiting for shipping",

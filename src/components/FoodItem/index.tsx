@@ -37,7 +37,7 @@ export const SingleFoodItem = ({
       { <p className="mt-1 text-sm text-gray-500">{calories} calories </p>}
         <div className="flex items-center justify-between gap-8 ">
           <p className="text-base text-headingColor font-semibold">
-            <span className="text-sm text-red-600">₵</span> {price}
+             {price} <span className="text-sm text-red-600">vnd</span>
           </p>
         </div>
       </div>

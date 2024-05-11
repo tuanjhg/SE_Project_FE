@@ -22,7 +22,7 @@ const StaticsImages: React.FC<foodItemsStatic> = ({ items }) => {
             {item.desc}
           </p>
           <p className="text-sm font-semibold text-headingColor">
-            <span className="text-xs text-red-600">₵</span> {item.price}
+            {item.price}  <span className="text-xs text-red-600">vnd</span>
           </p>
         </div>
       ))}

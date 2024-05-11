@@ -185,7 +185,7 @@ export const calculateCartTotal = (
   });
   dispatch({
     type: "SET_CART_TOTAL",
-    cartTotal: total.toFixed(2),
+    cartTotal: total.toFixed(3),
   });
 };
 
@@ -358,4 +358,3 @@ export const deleteFood = async (
   })
   toast.success("Food deleted successfully");
 };
-

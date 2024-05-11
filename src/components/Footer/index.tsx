@@ -33,7 +33,7 @@ const Footer = () => {
             {
               new Date().getFullYear()
             }    
-           {" "}Restaurant™. All Rights Reserved.
+           {" "}13 Restaurant™. All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0 md:text-xl">
           <motion.a

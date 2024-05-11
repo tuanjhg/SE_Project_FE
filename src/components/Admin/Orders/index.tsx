@@ -5,19 +5,19 @@ import Order from "./orders";
 
 
 const Orders = () => {
-  const [{ orders }, dispatch] = useStateValue();
+  const [{ users }, dispatch] = useStateValue();
   const [query, setQuery] = useState("");
-  const [filteredOrders, setFilteredOrders] = useState(orders);
+  const [filteredUsers, setFilteredUsers] = useState(users);
   
   const filterUsers = () => {
       if(query.length === 0) {
-        setFilteredOrders(orders);
+        setFilteredUsers(users);
       }else{
-        const filter = orders.filter((item:any) => item.displayName.toLowerCase().includes(query.toLowerCase()));
-        setFilteredOrders(filter);
+        const filter = users.filter((item:any) => item.displayName.toLowerCase().includes(query.toLowerCase()));
+        setFilteredUsers(filter);
       }
   }
-  const searchOrders = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const searchUsers = (e: React.ChangeEvent<HTMLInputElement>) => {
       setQuery(e.target.value);
       filterUsers();
   }
@@ -28,9 +28,9 @@ const Orders = () => {
         <input
           className="w-full p-2 outline-none rounded-lg "
           type="text"
-          placeholder="Search order"
+          placeholder="Search user"
           value={query}
-          onChange={(e) => searchOrders(e)}
+          onChange={(e) => searchUsers(e)}
         />
         {/* search button */}
         <button className="flex items-center justify-center gap-3 text-orange-700 font-bold py-2 px-4 rounded-lg">
@@ -41,8 +41,8 @@ const Orders = () => {
       {/* dasboard statistics and counts */}
       <div className="w-full grid grid-cols-3 gap-1">
         {
-          filteredOrders.map((order:any) => (
-            <Order key={order.id} item={order}/>
+          filteredUsers.map((user:any) => (
+            <Order key={user.uid} item = {user} />
           ))
         }
       </div>
@@ -51,3 +51,5 @@ const Orders = () => {
 };
 
 export default Orders;
+
+

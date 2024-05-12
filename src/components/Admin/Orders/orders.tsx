@@ -1,16 +1,18 @@
 import { MdDeleteForever } from "react-icons/md";
 import { BiEditAlt } from "react-icons/bi";
 const Order = ({item}: {item:any}) => {
+  const order_date = Date.now();
+  const status = "Waiting for shipping"
   return (
     <div className="max-w-sm h-auto rounded-lg border border-orange-50 bg-orange-600">
     <div className="flex flex-col gap-1 items-center pb-10">
       <div className="flex flex-col items-center justify-center">
         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-          {item?.id}
+          {item?.uid}
         </h5>
-        <span className="text-sm text-gray-300 ">{item?.user_id}</span>
-        <span className="text-sm text-gray-300 ">{item?.order_date}</span>
-        <span className="text-sm text-gray-300 ">{item?.status}</span>
+        <span className="text-sm text-gray-300 ">{item?.displayName }</span>
+        <span className="text-sm text-gray-300 ">{order_date}</span>
+        <span className="text-sm text-gray-300 ">{status}</span>
       </div>
       <div className="flex mt-4 space-x-3 lg:mt-6">
         <p

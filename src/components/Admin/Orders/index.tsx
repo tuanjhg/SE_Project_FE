@@ -13,7 +13,7 @@ const Orders = () => {
       if(query.length === 0) {
         setFilteredOrders(orders);
       }else{
-        const filter = orders.filter((item:any) => item.id.includes(query));
+        const filter = orders.filter((item:any) => item.displayName.toLowerCase().includes(query.toLowerCase()));
         setFilteredOrders(filter);
       }
   }
@@ -42,7 +42,7 @@ const Orders = () => {
       <div className="w-full grid grid-cols-3 gap-1">
         {
           filteredOrders.map((order:any) => (
-            <Order key={order.id} item = {order} />
+            <Order key={order.uid} item = {order} />
           ))
         }
       </div>

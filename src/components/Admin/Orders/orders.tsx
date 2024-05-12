@@ -16,6 +16,7 @@ const Order = ({item}: {item:any}) => {
   }
   return (
       <div className="max-w-sm h-auto rounded-lg border border-orange-50 bg-orange-600">
+        <div className="flex flex-col gap-1 items-center pb-10">
           <div className="flex flex-col items-center justify-center">
           <span className="text-sm text-gray-300 ">{item?.uid}</span>
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -55,6 +56,7 @@ const Order = ({item}: {item:any}) => {
             </p>
           </div>
         </div>
+      </div>
   )
 }
 

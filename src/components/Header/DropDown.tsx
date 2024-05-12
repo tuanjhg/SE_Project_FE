@@ -35,6 +35,11 @@ const DropDown = ({ user }: { user: any;}) => {
       </Link>
       <p
         className="cursor-pointer px-10 py-2 flex items-center gap-3 hover:bg-slate-100 transition-all duration-100 ease-in-out text-base text-textColor"
+        >
+        Order History
+      </p>
+      <p
+        className="cursor-pointer px-10 py-2 flex items-center gap-3 hover:bg-slate-100 transition-all duration-100 ease-in-out text-base text-textColor"
         onClick={() => logout(user, dispatch, navigate)}
       >
         Logout

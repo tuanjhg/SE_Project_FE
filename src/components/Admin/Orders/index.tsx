@@ -28,7 +28,7 @@ const Orders = () => {
                 <input
                     className="w-full p-2 outline-none rounded-lg "
                     type="text"
-                    placeholder="Search user"
+                    placeholder="Search order"
                     value={query}
                     onChange={(e) => searchUsers(e)}
                 />

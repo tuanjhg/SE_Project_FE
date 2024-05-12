@@ -40,7 +40,7 @@ const Body = ({ action }: { action: any }) => {
         <div className="w-full flex items-center justify-center my-2">
           <p className="text-gray-300">
             Amount Due:{" "}
-            <span className="font-bold text-white">{`GH₵${cartTotal}`}</span>{" "}
+            <span className="font-bold text-white">{`${cartTotal} vnd`}</span>{" "}
           </p>
         </div>
         {/* pay now button */}

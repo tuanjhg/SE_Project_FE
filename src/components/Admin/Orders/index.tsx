@@ -5,21 +5,21 @@ import Order from "./orders";
 
 
 const Orders = () => {
-  const [{ users }, dispatch] = useStateValue();
+  const [{ orders }, dispatch] = useStateValue();
   const [query, setQuery] = useState("");
-  const [filteredUsers, setFilteredUsers] = useState(users);
+  const [filteredOrders, setFilteredOrders] = useState(orders);
   
-  const filterUsers = () => {
+  const filterOrders = () => {
       if(query.length === 0) {
-        setFilteredUsers(users);
+        setFilteredOrders(orders);
       }else{
-        const filter = users.filter((item:any) => item.displayName.toLowerCase().includes(query.toLowerCase()));
-        setFilteredUsers(filter);
+        const filter = orders.filter((item:any) => item.id.includes(query));
+        setFilteredOrders(filter);
       }
   }
-  const searchUsers = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const searchOrders = (e: React.ChangeEvent<HTMLInputElement>) => {
       setQuery(e.target.value);
-      filterUsers();
+      filterOrders();
   }
   return (
     <div className="w-full justify-center flex flex-col">
@@ -28,9 +28,9 @@ const Orders = () => {
         <input
           className="w-full p-2 outline-none rounded-lg "
           type="text"
-          placeholder="Search user"
+          placeholder="Search order"
           value={query}
-          onChange={(e) => searchUsers(e)}
+          onChange={(e) => searchOrders(e)}
         />
         {/* search button */}
         <button className="flex items-center justify-center gap-3 text-orange-700 font-bold py-2 px-4 rounded-lg">
@@ -41,8 +41,8 @@ const Orders = () => {
       {/* dasboard statistics and counts */}
       <div className="w-full grid grid-cols-3 gap-1">
         {
-          filteredUsers.map((user:any) => (
-            <Order key={user.uid} item = {user} />
+          filteredOrders.map((order:any) => (
+            <Order key={order.id} item = {order} />
           ))
         }
       </div>
